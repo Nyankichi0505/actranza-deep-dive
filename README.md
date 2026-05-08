@@ -11,13 +11,13 @@ ActranzaLab（理化学機器・無針注射器・研究用）のマーケ担当
 3. **社内ダイセルインジェクターチーム（同仕組みの臨床用）への顧客パス候補判定**
 4. **理化学機器・医療機器チーム連携用ナレッジ蓄積**
 
-を1時間毎に自動で行うのが目的。
+を毎日12:00 JST（1日1回）自動で行うのが目的。
 
 ## 動作
 
 ```
 [Notion DB] ← ユーザーがステータスを「興味あり」に変更
-   ↓ 1時間毎にRoutineが検知
+   ↓ 毎日12:00 JSTにRoutineが検知
 [Routine: actranza-news-deep-dive]
    ↓ 「深掘り」プロパティを「処理中」に
    ↓ WebSearch/WebFetch で5項目調査
@@ -52,7 +52,7 @@ ActranzaLab（理化学機器・無針注射器・研究用）のマーケ担当
 
 ## ファイル構成
 
-- `prompt.md` - Routine が毎時実行する指示文
+- `prompt.md` - Routine が毎日12:00 JSTに実行する指示文
 - `deep-dive-spec.md` - 深掘り項目とHeat Score判定基準の詳細仕様
 - `notion-schema.md` - 保存先 Notion DB のスキーマ
 - `CHANGELOG.md` - 仕様変更履歴
